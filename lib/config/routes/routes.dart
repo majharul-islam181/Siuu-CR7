@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:news/views/allnews/allnews_screen.dart';
 
 import '../../views/views.dart';
 import 'routes_name.dart';
@@ -18,6 +19,10 @@ class Routes {
       // case RoutesName.loginScreen:
       //   return MaterialPageRoute(
       //       builder: (BuildContext context) => const LoginScreen());
+      case RoutesName.allnewsScreen:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const AllnewsScreen());
+
 
       default:
         return MaterialPageRoute(builder: (_) {

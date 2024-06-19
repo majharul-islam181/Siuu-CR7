@@ -3,16 +3,22 @@ import 'package:flutter/material.dart';
 
 import '../colors/app_colors.dart';
 
-
 class RoundButton extends StatelessWidget {
   final String title;
   final VoidCallback onPress;
   final double height;
+  final Color buttonColor;
+  final Color textColor;
+  final double textfontSize;
+
   const RoundButton({
     super.key,
     required this.title,
     required this.onPress,
     this.height = 40,
+    this.buttonColor = AppColors.buttonColor,
+    this.textColor = AppColors.blackColor,
+    this.textfontSize = 16
   });
 
   @override
@@ -23,10 +29,15 @@ class RoundButton extends StatelessWidget {
         height: height,
         width: MediaQuery.of(context).size.width * .4,
         decoration: BoxDecoration(
-            color: AppColors.buttonColor,
-            borderRadius: BorderRadius.circular(10)),
+            color: buttonColor, borderRadius: BorderRadius.circular(10)),
         child: Center(
-          child: Text(title),
+          child: Text(
+            title,
+            style: TextStyle(
+              color: textColor,
+              fontSize: textfontSize,
+            ),
+          ),
         ),
       ),
     );

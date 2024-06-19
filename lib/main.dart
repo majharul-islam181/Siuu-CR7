@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news/views/home_screen/home_screen.dart';
+import 'package:news/config/routes/routes_name.dart';
+import 'config/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       
       ),
-      home: const HomeScreen(),
+    initialRoute: RoutesName.homeScreen,
+    onGenerateRoute: Routes.generateRoute,
     );
   }
 }

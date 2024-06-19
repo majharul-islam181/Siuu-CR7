@@ -6,4 +6,6 @@ class AppUrl {
 
   static String allNews =
       'https://newsapi.org/v2/top-headlines/sources?apiKey=$newsapi';
+
+  
 }

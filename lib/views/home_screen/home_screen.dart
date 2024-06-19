@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news/config/colors/app_colors.dart';
+import 'package:news/config/components/round_button.dart';
+import 'package:news/config/routes/routes_name.dart';
 import 'package:news/config/strings/mystrings.dart';
 import 'package:news/views/home_screen/widget/reusabletext.dart';
 import 'package:news/views/home_screen/widget/roundavatar.dart';
@@ -53,6 +55,21 @@ class _HomeScreenState extends State<HomeScreen> {
             fontSize: 16,
           ),
           const Roundavatar(),
+          const SizedBox(
+            height: 50,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RoundButton(
+                  title: "Go to All News",
+                  textColor: Colors.white,
+                  buttonColor: const Color.fromARGB(255, 102, 99, 230),
+                  onPress: () {
+                    Navigator.pushNamed(context, RoutesName.allnewsScreen);
+                  }),
+            ],
+          )
         ],
       ),
     );
